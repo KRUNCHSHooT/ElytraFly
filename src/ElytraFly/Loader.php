@@ -21,12 +21,11 @@ class Loader extends PluginBase implements Listener
 	
 	public function onArmor(EntityArmorChangeEvent $ev){
 		$sender = $ev->getEntity();
+		
 		$item = $ev->getNewItem();
 		if($item->getId() == 444){
 			$sender->setAllowFlight(true);
 			$sender->setFlying(true);
-			$volume = mt_rand();
-			$sender->getLevel()->broadcastLevelSoundEvent($sender, LevelSoundEventPacket::SOUND_LEVELUP, (int) $volume);
 		} else {
 			$sender->setAllowFlight(false);
 			$sender->setFlying(false);
