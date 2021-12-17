@@ -13,7 +13,6 @@ class Loader extends PluginBase implements Listener
 {
 	
 	public function onEnable(){
-		$this->getLogger()->info("ElytraFly Enabled");
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		if(!$this->getDescription()->getAuthors() === "KRUNCH7SHooT"){
 			$this->getPluginLoader()->disablePlugin($this);
